@@ -27,7 +27,9 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
+					glow: 'hsl(var(--primary-glow))',
+					bright: 'hsl(var(--primary-bright))',
+					deep: 'hsl(var(--primary-deep))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -35,9 +37,16 @@ export default {
 				},
 				golden: {
 					DEFAULT: 'hsl(var(--golden))',
-					foreground: 'hsl(var(--golden-foreground))'
+					foreground: 'hsl(var(--golden-foreground))',
+					bright: 'hsl(var(--golden-bright))',
+					deep: 'hsl(var(--golden-deep))'
 				},
+				// Cosmic spectrum colors
 				'cosmic-blue': 'hsl(var(--cosmic-blue))',
+				'cosmic-purple': 'hsl(var(--cosmic-purple))',
+				'cosmic-pink': 'hsl(var(--cosmic-pink))',
+				'cosmic-cyan': 'hsl(var(--cosmic-cyan))',
+				'stellar-white': 'hsl(var(--stellar-white))',
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -116,6 +125,78 @@ export default {
 					'50%': {
 						transform: 'translateY(-10px)'
 					}
+				},
+				'neo-glow': {
+					'0%, 100%': {
+						boxShadow: 'var(--shadow-neo-glow)',
+						opacity: '1'
+					},
+					'50%': {
+						boxShadow: '0 0 80px hsl(var(--primary-bright) / 0.6), 0 0 120px hsl(var(--cosmic-blue) / 0.4)',
+						opacity: '0.9'
+					}
+				},
+				'stellar-dance': {
+					'0%': {
+						transform: 'rotate(0deg) scale(1)',
+						filter: 'hue-rotate(0deg)'
+					},
+					'25%': {
+						transform: 'rotate(90deg) scale(1.1)',
+						filter: 'hue-rotate(90deg)'
+					},
+					'50%': {
+						transform: 'rotate(180deg) scale(1)',
+						filter: 'hue-rotate(180deg)'
+					},
+					'75%': {
+						transform: 'rotate(270deg) scale(1.1)',
+						filter: 'hue-rotate(270deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg) scale(1)',
+						filter: 'hue-rotate(360deg)'
+					}
+				},
+				'aurora-shimmer': {
+					'0%, 100%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
+					}
+				},
+				'quantum-phase': {
+					'0%': {
+						transform: 'translateX(0) rotateY(0deg)',
+						opacity: '1'
+					},
+					'25%': {
+						transform: 'translateX(10px) rotateY(90deg)',
+						opacity: '0.7'
+					},
+					'50%': {
+						transform: 'translateX(0) rotateY(180deg)',
+						opacity: '1'
+					},
+					'75%': {
+						transform: 'translateX(-10px) rotateY(270deg)',
+						opacity: '0.7'
+					},
+					'100%': {
+						transform: 'translateX(0) rotateY(360deg)',
+						opacity: '1'
+					}
+				},
+				'cosmic-orb': {
+					'0%, 100%': {
+						transform: 'scale(1) rotate(0deg)',
+						borderRadius: '50%'
+					},
+					'50%': {
+						transform: 'scale(1.2) rotate(180deg)',
+						borderRadius: '30%'
+					}
 				}
 			},
 			animation: {
@@ -123,17 +204,31 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'cosmic-pulse': 'cosmic-pulse 3s ease-in-out infinite',
 				'celestial-glow': 'celestial-glow 2s ease-in-out infinite',
-				'mystical-float': 'mystical-float 4s ease-in-out infinite'
+				'mystical-float': 'mystical-float 4s ease-in-out infinite',
+				'neo-glow': 'neo-glow 4s ease-in-out infinite',
+				'stellar-dance': 'stellar-dance 8s linear infinite',
+				'aurora-shimmer': 'aurora-shimmer 6s ease-in-out infinite',
+				'quantum-phase': 'quantum-phase 5s ease-in-out infinite',
+				'cosmic-orb': 'cosmic-orb 6s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-cosmic': 'var(--gradient-cosmic)',
+				'gradient-neo-cosmic': 'var(--gradient-neo-cosmic)',
+				'gradient-stellar': 'var(--gradient-stellar)',
+				'gradient-aurora': 'var(--gradient-aurora)',
 				'gradient-celestial': 'var(--gradient-celestial)',
-				'gradient-mystical': 'var(--gradient-mystical)'
+				'gradient-mystical': 'var(--gradient-mystical)',
+				'gradient-nebula': 'var(--gradient-nebula)',
+				'gradient-starfield': 'var(--gradient-starfield)',
+				'gradient-cosmic-orb': 'var(--gradient-cosmic-orb)'
 			},
 			boxShadow: {
 				'cosmic': 'var(--shadow-cosmic)',
 				'celestial': 'var(--shadow-celestial)',
-				'golden': 'var(--shadow-golden)'
+				'golden': 'var(--shadow-golden)',
+				'neo-glow': 'var(--shadow-neo-glow)',
+				'stellar': 'var(--shadow-stellar)',
+				'aurora': 'var(--shadow-aurora)'
 			}
 		}
 	},

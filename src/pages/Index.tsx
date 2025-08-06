@@ -69,34 +69,47 @@ const Index = () => {
         onAuthClick={handleAuthClick}
       />
       
-      {/* Hero Section */}
+      {/* Enhanced Hero Section with Neo-Cosmic Effects */}
       <section className="relative py-20 px-4 overflow-hidden">
+        {/* Cosmic Background Layers */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
           style={{ backgroundImage: `url(${cosmicHero})` }}
         />
-        <div className="absolute inset-0 bg-gradient-mystical" />
+        <div className="absolute inset-0 bg-gradient-nebula animate-aurora-shimmer" />
+        <div className="absolute inset-0 bg-gradient-mystical/40" />
+        
+        {/* Floating Cosmic Orbs */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-cosmic-orb rounded-full animate-cosmic-orb opacity-20"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-stellar rounded-full animate-stellar-dance opacity-15"></div>
+        <div className="absolute top-1/2 left-1/3 w-20 h-20 bg-gradient-aurora rounded-full animate-quantum-phase opacity-25"></div>
         
         <div className="relative container mx-auto text-center space-y-8">
-          <div className="flex justify-center space-x-4 mb-8">
-            <Sun className="h-8 w-8 text-golden animate-mystical-float" />
-            <Star className="h-10 w-10 text-primary animate-cosmic-pulse" />
-            <Moon className="h-8 w-8 text-cosmic-blue animate-mystical-float" style={{ animationDelay: '1s' }} />
+          <div className="flex justify-center space-x-6 mb-8">
+            <div className="floating-orb">
+              <Sun className="h-10 w-10 text-golden-bright shadow-golden" />
+            </div>
+            <div className="floating-orb" style={{ animationDelay: '0.5s' }}>
+              <Star className="h-12 w-12 text-primary-bright animate-neo-glow shadow-neo-glow" />
+            </div>
+            <div className="floating-orb" style={{ animationDelay: '1s' }}>
+              <Moon className="h-10 w-10 text-cosmic-cyan shadow-aurora" />
+            </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-cosmic bg-clip-text text-transparent mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold cosmic-text mb-6 animate-neo-glow">
             HoroscopeGuru.AI
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-xl md:text-2xl aurora-text max-w-3xl mx-auto mb-8">
             Unlock the secrets of your cosmic destiny with AI-powered astrology. 
             Discover your life path, relationships, and future through ancient wisdom 
             and modern intelligence.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
-              variant="hero" 
+              variant="neo-cosmic" 
               size="lg"
               onClick={() => document.getElementById('kundli-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
@@ -106,7 +119,7 @@ const Index = () => {
             
             {user && (
               <Button 
-                variant="mystical" 
+                variant="aurora" 
                 size="lg"
                 onClick={() => navigate('/dashboard')}
               >

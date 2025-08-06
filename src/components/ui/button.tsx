@@ -22,6 +22,10 @@ const buttonVariants = cva(
         mystical: "bg-gradient-to-r from-cosmic-blue/10 to-golden/10 text-primary border border-primary/20 hover:border-primary/40 hover:bg-gradient-to-r hover:from-cosmic-blue/20 hover:to-golden/20",
         golden: "bg-golden text-golden-foreground hover:bg-golden/90 shadow-golden hover:shadow-celestial",
         hero: "bg-gradient-cosmic text-primary-foreground text-lg px-8 py-4 hover:scale-105 shadow-cosmic hover:shadow-celestial animate-cosmic-pulse",
+        "neo-cosmic": "bg-gradient-neo-cosmic text-primary-foreground hover:scale-110 shadow-neo-glow hover:shadow-stellar animate-neo-glow",
+        stellar: "bg-gradient-stellar text-primary-foreground hover:scale-105 shadow-stellar hover:shadow-aurora animate-stellar-dance",
+        aurora: "bg-gradient-aurora text-primary-foreground hover:scale-105 shadow-aurora animate-aurora-shimmer hover:animate-quantum-phase",
+        nebula: "relative bg-gradient-cosmic text-primary-foreground hover:scale-105 shadow-cosmic overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-nebula before:animate-cosmic-orb",
       },
       size: {
         default: "h-10 px-4 py-2",
