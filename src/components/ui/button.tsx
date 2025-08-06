@@ -5,11 +5,11 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-cosmic",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -18,6 +18,10 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        cosmic: "bg-gradient-cosmic text-primary-foreground hover:scale-105 shadow-celestial hover:shadow-golden animate-celestial-glow",
+        mystical: "bg-gradient-to-r from-cosmic-blue/10 to-golden/10 text-primary border border-primary/20 hover:border-primary/40 hover:bg-gradient-to-r hover:from-cosmic-blue/20 hover:to-golden/20",
+        golden: "bg-golden text-golden-foreground hover:bg-golden/90 shadow-golden hover:shadow-celestial",
+        hero: "bg-gradient-cosmic text-primary-foreground text-lg px-8 py-4 hover:scale-105 shadow-cosmic hover:shadow-celestial animate-cosmic-pulse",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* HoroscopeGuru.AI Design System - Celestial Light Theme
+All colors MUST be HSL. Cosmic, mystical, and elegant design tokens.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cosmic color palette */
+    --background: 250 100% 99%;
+    --foreground: 258 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 255 100% 98%;
+    --card-foreground: 258 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 255 100% 98%;
+    --popover-foreground: 258 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Cosmic primary - deep celestial purple */
+    --primary: 258 85% 25%;
+    --primary-foreground: 250 100% 98%;
+    --primary-glow: 258 75% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Golden celestial accents */
+    --secondary: 42 95% 92%;
+    --secondary-foreground: 258 85% 25%;
+    --golden: 42 100% 65%;
+    --golden-foreground: 258 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Soft mystical muted tones */
+    --muted: 250 60% 96%;
+    --muted-foreground: 258 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent cosmic blue */
+    --accent: 250 60% 96%;
+    --accent-foreground: 258 85% 25%;
+    --cosmic-blue: 225 85% 70%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 250 100% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 250 30% 88%;
+    --input: 250 30% 92%;
+    --ring: 258 85% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Cosmic gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-celestial: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+    --gradient-mystical: linear-gradient(45deg, hsl(var(--cosmic-blue) / 0.1), hsl(var(--golden) / 0.1));
+    
+    /* Cosmic shadows */
+    --shadow-cosmic: 0 20px 40px -12px hsl(var(--primary) / 0.2);
+    --shadow-celestial: 0 8px 32px -8px hsl(var(--primary-glow) / 0.3);
+    --shadow-golden: 0 4px 20px hsl(var(--golden) / 0.4);
+    
+    /* Smooth cosmic animations */
+    --transition-cosmic: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-mystical: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
 
