@@ -8,39 +8,45 @@ All colors MUST be HSL. Neo-cosmic gradients and celestial visual effects.
 
 @layer base {
   :root {
-    /* Enhanced cosmic color palette */
-    --background: 250 100% 99%;
-    --foreground: 258 25% 15%;
+    /* Wellness-focused color palette */
+    --background: 60 14% 97%; /* Pure Calm (Off-White #FAF9F6) */
+    --foreground: 0 0% 23%; /* Slate Charcoal (#3A3A3A) */
 
-    --card: 255 100% 98%;
-    --card-foreground: 258 25% 15%;
+    --card: 60 14% 97%;
+    --card-foreground: 0 0% 23%;
 
-    --popover: 255 100% 98%;
-    --popover-foreground: 258 25% 15%;
+    --popover: 60 14% 97%;
+    --popover-foreground: 0 0% 23%;
 
-    /* Neo-cosmic primary colors */
-    --primary: 258 85% 25%;
-    --primary-foreground: 250 100% 98%;
-    --primary-glow: 258 75% 65%;
-    --primary-bright: 258 95% 75%;
-    --primary-deep: 258 90% 15%;
+    /* Cosmic Blue primary colors */
+    --primary: 211 72% 58%; /* Cosmic Blue (#4A90E2) */
+    --primary-foreground: 60 14% 97%;
+    --primary-glow: 211 62% 68%;
+    --primary-bright: 211 82% 78%;
+    --primary-deep: 211 72% 38%;
 
-    /* Enhanced golden celestial accents */
-    --secondary: 42 95% 92%;
-    --secondary-foreground: 258 85% 25%;
-    --golden: 42 100% 65%;
-    --golden-foreground: 258 25% 15%;
-    --golden-bright: 42 100% 85%;
-    --golden-deep: 35 95% 45%;
+    /* Lavender Bliss accents */
+    --secondary: 300 24% 85%; /* Lavender Bliss (#D8BFD8) */
+    --secondary-foreground: 0 0% 23%;
+    --lavender-bliss: 300 24% 85%;
+    --lavender-foreground: 0 0% 23%;
+    --lavender-bright: 300 34% 90%;
+    --lavender-deep: 300 24% 75%;
 
-    /* Mystical spectrum colors */
-    --muted: 250 60% 96%;
-    --muted-foreground: 258 15% 45%;
-    --cosmic-blue: 225 85% 70%;
-    --cosmic-purple: 285 85% 70%;
-    --cosmic-pink: 320 75% 75%;
-    --cosmic-cyan: 195 85% 70%;
-    --stellar-white: 250 100% 95%;
+    /* Peach Glow and Wellness Mint */
+    --peach-glow: 28 100% 85%; /* Peach Glow (#FFDAB9) */
+    --peach-foreground: 0 0% 23%;
+    --wellness-mint: 165 100% 74%; /* Wellness Mint (#AAF0D1) */
+    --wellness-mint-foreground: 0 0% 23%;
+
+    /* Mystical spectrum colors - wellness focused */
+    --muted: 60 14% 94%;
+    --muted-foreground: 0 0% 45%;
+    --cosmic-blue: 211 72% 58%;
+    --cosmic-purple: 285 75% 65%;
+    --cosmic-pink: 320 65% 75%;
+    --cosmic-cyan: 195 75% 65%;
+    --stellar-white: 60 14% 95%;
 
     /* Accent cosmic variations */
     --accent: 250 60% 96%;
@@ -55,16 +61,16 @@ All colors MUST be HSL. Neo-cosmic gradients and celestial visual effects.
 
     --radius: 0.75rem;
 
-    /* Neo-cosmic gradients - Multiple variants */
+    /* Wellness-focused gradients */
     --gradient-cosmic: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-neo-cosmic: linear-gradient(135deg, hsl(var(--primary-deep)), hsl(var(--cosmic-blue)), hsl(var(--golden)));
-    --gradient-stellar: linear-gradient(135deg, hsl(var(--cosmic-purple)), hsl(var(--cosmic-pink)), hsl(var(--golden-bright)));
-    --gradient-aurora: linear-gradient(45deg, hsl(var(--cosmic-cyan)), hsl(var(--cosmic-blue)), hsl(var(--cosmic-purple)));
+    --gradient-wellness: linear-gradient(135deg, hsl(var(--wellness-mint)), hsl(var(--lavender-bliss)), hsl(var(--peach-glow)));
+    --gradient-lavender: linear-gradient(135deg, hsl(var(--lavender-bliss)), hsl(var(--lavender-bright)));
+    --gradient-peach: linear-gradient(135deg, hsl(var(--peach-glow)), hsl(var(--peach-glow)));
+    --gradient-mint: linear-gradient(135deg, hsl(var(--wellness-mint)), hsl(var(--wellness-mint)));
     --gradient-celestial: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
-    --gradient-mystical: linear-gradient(45deg, hsl(var(--cosmic-blue) / 0.1), hsl(var(--golden) / 0.1));
-    --gradient-nebula: radial-gradient(ellipse at center, hsl(var(--cosmic-purple) / 0.3), hsl(var(--cosmic-blue) / 0.2), transparent);
-    --gradient-starfield: conic-gradient(from 0deg, hsl(var(--primary)), hsl(var(--cosmic-blue)), hsl(var(--golden)), hsl(var(--cosmic-purple)), hsl(var(--primary)));
-    --gradient-cosmic-orb: radial-gradient(circle, hsl(var(--golden) / 0.4), hsl(var(--cosmic-blue) / 0.3), hsl(var(--primary) / 0.2));
+    --gradient-mystical: linear-gradient(45deg, hsl(var(--lavender-bliss) / 0.3), hsl(var(--wellness-mint) / 0.3));
+    --gradient-mood: radial-gradient(ellipse at center, hsl(var(--peach-glow) / 0.4), hsl(var(--lavender-bliss) / 0.3), transparent);
+    --gradient-wellness-card: linear-gradient(135deg, hsl(var(--lavender-bliss) / 0.8), hsl(var(--peach-glow) / 0.6), hsl(var(--wellness-mint) / 0.7));
     
     /* Enhanced cosmic shadows with glow effects */
     --shadow-cosmic: 0 20px 40px -12px hsl(var(--primary) / 0.2);

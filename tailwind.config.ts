@@ -35,11 +35,19 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
-				golden: {
-					DEFAULT: 'hsl(var(--golden))',
-					foreground: 'hsl(var(--golden-foreground))',
-					bright: 'hsl(var(--golden-bright))',
-					deep: 'hsl(var(--golden-deep))'
+				'lavender-bliss': {
+					DEFAULT: 'hsl(var(--lavender-bliss))',
+					foreground: 'hsl(var(--lavender-foreground))',
+					bright: 'hsl(var(--lavender-bright))',
+					deep: 'hsl(var(--lavender-deep))'
+				},
+				'peach-glow': {
+					DEFAULT: 'hsl(var(--peach-glow))',
+					foreground: 'hsl(var(--peach-foreground))'
+				},
+				'wellness-mint': {
+					DEFAULT: 'hsl(var(--wellness-mint))',
+					foreground: 'hsl(var(--wellness-mint-foreground))'
 				},
 				// Cosmic spectrum colors
 				'cosmic-blue': 'hsl(var(--cosmic-blue))',
@@ -213,14 +221,14 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-cosmic': 'var(--gradient-cosmic)',
-				'gradient-neo-cosmic': 'var(--gradient-neo-cosmic)',
-				'gradient-stellar': 'var(--gradient-stellar)',
-				'gradient-aurora': 'var(--gradient-aurora)',
+				'gradient-wellness': 'var(--gradient-wellness)',
+				'gradient-lavender': 'var(--gradient-lavender)',
+				'gradient-peach': 'var(--gradient-peach)',
+				'gradient-mint': 'var(--gradient-mint)',
 				'gradient-celestial': 'var(--gradient-celestial)',
 				'gradient-mystical': 'var(--gradient-mystical)',
-				'gradient-nebula': 'var(--gradient-nebula)',
-				'gradient-starfield': 'var(--gradient-starfield)',
-				'gradient-cosmic-orb': 'var(--gradient-cosmic-orb)'
+				'gradient-mood': 'var(--gradient-mood)',
+				'gradient-wellness-card': 'var(--gradient-wellness-card)'
 			},
 			boxShadow: {
 				'cosmic': 'var(--shadow-cosmic)',
