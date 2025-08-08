@@ -6,6 +6,7 @@ import AuthModal from "@/components/AuthModal";
 import MoodTracker from "@/components/MoodTracker";
 import WellnessTips from "@/components/WellnessTips";
 import CommunityHighlights from "@/components/CommunityHighlights";
+import DailyPlanner from "@/components/DailyPlanner";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -33,6 +34,17 @@ const Index = () => {
     if (storedCredits) {
       setCredits(parseInt(storedCredits));
     }
+
+    // SEO
+    document.title = "Cosmic Wellness Astrology | HoroscopeGuru.AI";
+    const desc = "Personalized Kundli, daily planner, mood check-ins, and AI insights for Gen Z wellness.";
+    let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', 'description');
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', desc);
   }, []);
 
   const handleAuthenticated = (newUser: User) => {
@@ -105,20 +117,64 @@ const Index = () => {
               onClick={() => document.getElementById('kundli-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Sparkles className="w-5 h-5 mr-2" />
-              Start Your Journey
+              Generate Free Kundli
             </Button>
-            
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-lavender-bliss hover:bg-lavender-bliss/20"
+              onClick={() => document.getElementById('daily-planner')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Explore Daily Planner
+            </Button>
             {user && (
               <Button 
-                variant="outline" 
+                variant="ghost" 
                 size="lg"
-                className="border-lavender-bliss hover:bg-lavender-bliss/20"
                 onClick={() => navigate('/dashboard')}
               >
                 Go to Dashboard
               </Button>
             )}
           </div>
+
+          {/* Hero Widgets */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            <Card className="bg-background/70 border-primary/20">
+              <CardContent className="p-4 flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-muted-foreground">Color of the Day</p>
+                  <p className="text-sm font-medium text-cosmic-blue">Wellness Mint</p>
+                </div>
+                <Sun className="h-6 w-6 text-wellness-mint" />
+              </CardContent>
+            </Card>
+            <Card className="bg-background/70 border-primary/20">
+              <CardContent className="p-4 flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-muted-foreground">Lucky Time Window</p>
+                  <p className="text-sm font-medium text-primary">10:00 — 13:00</p>
+                </div>
+                <Moon className="h-6 w-6 text-lavender-bliss" />
+              </CardContent>
+            </Card>
+            <Card className="bg-background/70 border-primary/20">
+              <CardContent className="p-4 flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-muted-foreground">Today’s Vibe</p>
+                  <p className="text-sm font-medium text-lavender-bliss">Creative • Calm</p>
+                </div>
+                <Star className="h-6 w-6 text-peach-glow" />
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Daily Planner */}
+      <section id="daily-planner" className="py-16 px-4">
+        <div className="container mx-auto">
+          <DailyPlanner />
         </div>
       </section>
 
