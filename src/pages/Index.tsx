@@ -7,10 +7,13 @@ import MoodTracker from "@/components/MoodTracker";
 import WellnessTips from "@/components/WellnessTips";
 import CommunityHighlights from "@/components/CommunityHighlights";
 import DailyPlanner from "@/components/DailyPlanner";
+import CosmicHero from "@/components/home/CosmicHero";
+import QuickActions from "@/components/home/QuickActions";
+import FAQ from "@/components/home/FAQ";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Star, Moon, Sun, Heart, Brain, Users } from "lucide-react";
+import { Star, Brain, Users } from "lucide-react";
 
 interface User {
   email: string;
@@ -84,92 +87,11 @@ const Index = () => {
         onAuthClick={handleAuthClick}
       />
       
-      {/* Hero Section - Wellness Focused */}
-      <section className="relative py-20 px-4 bg-gradient-mystical">
-        <div className="container mx-auto text-center space-y-8">
-          <div className="flex justify-center space-x-6 mb-8">
-            <div className="p-3 rounded-full bg-wellness-mint/20">
-              <Heart className="h-8 w-8 text-wellness-mint" />
-            </div>
-            <div className="p-3 rounded-full bg-lavender-bliss/20">
-              <Star className="h-10 w-10 text-lavender-bliss" />
-            </div>
-            <div className="p-3 rounded-full bg-peach-glow/20">
-              <Brain className="h-8 w-8 text-peach-glow" />
-            </div>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
-            Discover Your Cosmic Wellness Journey
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Blend ancient astrological wisdom with modern wellness practices. 
-            Understand your emotions, make better decisions, and find your path 
-            through personalized cosmic insights.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              variant="default" 
-              size="lg"
-              className="bg-primary hover:bg-primary/90"
-              onClick={() => document.getElementById('kundli-form')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <Sparkles className="w-5 h-5 mr-2" />
-              Generate Free Kundli
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-lavender-bliss hover:bg-lavender-bliss/20"
-              onClick={() => document.getElementById('daily-planner')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Explore Daily Planner
-            </Button>
-            {user && (
-              <Button 
-                variant="ghost" 
-                size="lg"
-                onClick={() => navigate('/dashboard')}
-              >
-                Go to Dashboard
-              </Button>
-            )}
-          </div>
+      {/* Hero */}
+      <CosmicHero />
 
-          {/* Hero Widgets */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            <Card className="bg-background/70 border-primary/20">
-              <CardContent className="p-4 flex items-center justify-between">
-                <div>
-                  <p className="text-xs text-muted-foreground">Color of the Day</p>
-                  <p className="text-sm font-medium text-cosmic-blue">Wellness Mint</p>
-                </div>
-                <Sun className="h-6 w-6 text-wellness-mint" />
-              </CardContent>
-            </Card>
-            <Card className="bg-background/70 border-primary/20">
-              <CardContent className="p-4 flex items-center justify-between">
-                <div>
-                  <p className="text-xs text-muted-foreground">Lucky Time Window</p>
-                  <p className="text-sm font-medium text-primary">10:00 — 13:00</p>
-                </div>
-                <Moon className="h-6 w-6 text-lavender-bliss" />
-              </CardContent>
-            </Card>
-            <Card className="bg-background/70 border-primary/20">
-              <CardContent className="p-4 flex items-center justify-between">
-                <div>
-                  <p className="text-xs text-muted-foreground">Today’s Vibe</p>
-                  <p className="text-sm font-medium text-lavender-bliss">Creative • Calm</p>
-                </div>
-                <Star className="h-6 w-6 text-peach-glow" />
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* Quick Actions */}
+      <QuickActions />
 
       {/* Daily Planner */}
       <section id="daily-planner" className="py-16 px-4">
@@ -250,6 +172,9 @@ const Index = () => {
           />
         </div>
       </section>
+
+      {/* FAQ */}
+      <FAQ />
 
       <Footer />
 
